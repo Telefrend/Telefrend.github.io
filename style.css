@@ -79,7 +79,23 @@ body {
     border-radius: 8px;
 }
 
-@media (max-width: 500px) {
+.home {
+    height: 100vh;
+    width: 100%;
+    background-image: url(desktop-home-background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home img {
+    width: 35%;
+}
+
+@media (max-width: 550px) {
     .toggle-button {
         display: flex;
     }
@@ -111,5 +127,13 @@ body {
 
     .navbar-links.active {
         display: flex;
+    }
+
+    .home {
+        background-image: url(mobile-home-background-image.jpg);
+    }
+    
+    .home img {
+        width: 70%;
     }
 }
