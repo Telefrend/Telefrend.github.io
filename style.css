@@ -131,6 +131,7 @@ body {
     }
 
     .home {
+        margin: 0;
         background-image: url(mobile-home-background-image.jpg);
     }
     
