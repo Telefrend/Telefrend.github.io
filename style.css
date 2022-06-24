@@ -292,6 +292,15 @@ body {
         align-items: flex-start;
     }
 
+    .brand-logo img {
+        width: 20px;
+    }
+    
+    .toggle-button {
+        width: 20px;
+        height: 16px;
+    }
+
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
