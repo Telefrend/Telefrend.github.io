@@ -96,6 +96,54 @@ body {
     width: 35%;
 }
 
+.products {
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(0deg, #120D3699, #120D3699), url(market.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 10vh 40vh 50vh;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "title"
+    "logo"
+    "description"
+}
+
+.products .title {
+    grid-area: title;
+    color: var(--primary-color);
+    background-color: #120D3699;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.products .logo {
+    grid-area: logo;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products .logo img {
+    height: 40%;
+}
+
+.products .description {
+    grid-area: description;
+    color: var(--primary-color);
+    background-color: #120D3699;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
 .contact {
     background-color: var(--secondary-color);
     height: 100vh;
@@ -255,6 +303,15 @@ body {
     
     .home img {
         width: 70%;
+    }
+
+    .products {
+        height: auto;
+        grid-template-rows: 10vh 40vh auto;
+    }
+    
+    .products .title {
+        font-size: medium;
     }
 
     .contact {
