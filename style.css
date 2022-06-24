@@ -142,6 +142,7 @@ body {
     padding: 2rem;
     display: flex;
     justify-content: center;
+    overflow-y: auto;
 }
 
 .contact {
@@ -181,7 +182,65 @@ body {
 
 .contact .contacts {
     grid-area: contacts;
-    background-color: orange;
+    color: var(--primary-color);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2rem 2rem 2rem;
+    font-size: small;
+}
+
+.contact .contacts .social-media-wrapper {
+    width: 50%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .contacts .social-media-wrapper .icon {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact .contacts .social-media-wrapper .facebook:hover {
+    background-color: #3b5999;
+    color: white;
+}
+
+.contact .contacts .social-media-wrapper .twitter:hover {
+    background-color: #46C1F6;
+    color: white;
+}
+
+.contact .contacts .social-media-wrapper .linkedin:hover {
+    background-color: #0072B1;
+    color: white;
+}
+
+.contact .contacts .social-media-wrapper .github:hover {
+    background-color: #333333;
+    color: white;
+}
+
+.contact .contacts div {
+    margin: .5rem;
+    text-align: center;
 }
 
 .contact .direction {
@@ -215,52 +274,6 @@ body {
     padding: 0;
     margin-top: .8rem;
 }
-
-/* .social-media-wrapper {
-    margin-top: 10%;
-    width: 35%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.social-media-wrapper .icon {
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-radius: 50%;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 22px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.social-media-wrapper .facebook:hover {
-    background-color: #3b5999;
-    color: white;
-}
-
-.social-media-wrapper .twitter:hover {
-    background-color: #46C1F6;
-    color: white;
-}
-
-.social-media-wrapper .linkedin:hover {
-    background-color: #0072B1;
-    color: white;
-}
-
-.social-media-wrapper .github:hover {
-    background-color: #333333;
-    color: white;
-} */
 
 @media (max-width: 550px) {
     .toggle-button {
@@ -307,7 +320,7 @@ body {
 
     .products {
         height: auto;
-        grid-template-rows: 10vh 40vh auto;
+        grid-template-rows: 10vh 40vh 50vh;
     }
     
     .products .title {
@@ -315,13 +328,17 @@ body {
     }
 
     .contact {
-        grid-template-rows: 20% 20% 50% auto;
+        grid-template-rows: 20% auto 50% auto;
         grid-template-columns: 100%;
         grid-template-areas: 
         "title"
         "contacts" 
         "direction"
         "copyright"
+    }
+
+    .contact .contacts .social-media-wrapper {
+        width: 70%;
     }
 
     .contact .title p {
