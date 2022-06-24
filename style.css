@@ -348,6 +348,10 @@ header {
         font-size: medium;
     }
 
+    .products .description {
+        font-size: smaller;
+    }
+
     .contact {
         grid-template-rows: 20% auto 50% auto;
         grid-template-columns: 100%;
