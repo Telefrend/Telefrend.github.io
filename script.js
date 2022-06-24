@@ -1,5 +1,3 @@
-let isScrolling = false;
-
 const body = document.querySelector(".body");
 const header = document.querySelector(".header");
 const toggleButton = document.getElementsByClassName("toggle-button")[0];
